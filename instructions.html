@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            /* Fallback background color */
+            background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Popup container styling with increased width */
+        .popup-container {
+            position: relative;
+            width: 600px;
+            /* Initial width */
+            padding: 20px 40px;
+            /* Adjusted padding for better horizontal spacing */
+            background-color: #2c2f38;
+            /* Darker background for better contrast */
+            border-radius: 15px;
+            border: 2px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 80vh;
+            transition: box-shadow 0.3s ease;
+            /* Only transition box-shadow on hover */
+        }
+
+        /* Hover effect for popup container */
+        .popup-container:hover {
+            box-shadow: 0 0 20px 5px rgb(133, 165, 202);
+            /* Neon red glow effect */
+        }
+
+        /* Heading styles */
+        h1 {
+            font-size: 3em;
+            color: #00aaff;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 5px rgba(0, 170, 255, 0.1);
+            /* Light blue glow effect for heading */
+        }
+
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #b0b0b0;
+        }
+
+        /* Instruction item container styling */
+        .instruction-item {
+            margin-bottom: 20px;
+        }
+
+        /* Instruction item subheading */
+        .instruction-item h3 {
+            font-size: 1.1em;
+            color: #8ccef1;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+            /* Light blue glow effect for subheading */
+        }
+
+        /* Instruction paragraph styling */
+        .instruction-item p {
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #d1d1d1;
+        }
+
+        /* Close button styling */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d4d;
+            /* Close button color */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.1s;
+            /* Transition for hover effect */
+            padding: 5px;
+        }
+
+        .close-button:hover {
+            background-color: #ff1a1a;
+            /* Darker red on hover */
+            box-shadow: 0 0 10px 5px rgba(255, 77, 77, 1);
+            /* Neon red glow effect on hover */
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 1200px) {
+            .popup-container {
+                width: 80%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .popup-container {
+                width: 75%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .popup-container {
+                width: 85%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            .instruction-item h3 {
+                font-size: 1em;
+            }
+
+            .instruction-item p {
+                font-size: 0.9em;
+            }
+
+            .close-button {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .popup-container {
+                width: 90%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            h2 {
+                font-size: 0.9em;
+            }
+
+            .instruction-item h3 {
+                font-size: 0.95em;
+            }
+
+            .instruction-item p {
+                font-size: 0.85em;
+            }
+
+            .close-button {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="popup-container">
+        <a href="index.html"><button class="close-button">&times;</button></a>
+        <h1>Instructions</h1>
+        <h2>Instructions for Using Country Explorer Globe</h2>
+
+        <div class="instruction-item">
+            <h3>Search for a Country</h3>
+            <p>Use the search bar to type the name of any country to find it on the globe. The search will filter
+                countries based on the name.</p>
+        </div>
+
+        <div class="instruction-item">
+            <h3>Filter by Region</h3>
+            <p>Select a region (Africa, Americas, Asia, Europe, Oceania) from the dropdown to view countries only from
+                that region.</p>
+        </div>
+
+        <div class="instruction-item">
+            <h3>Stop the Globe</h3>
+            <p>Click anywhere on the globe to start or stop its rotation. You can also zoom in or out using your mouse scroll wheel.</p>
+        </div>
+    
+        <div class="instruction-item">
+            <h3>Interact with the Globe</h3>
+            <p>Click on any country on the globe to view more details such as the country's name, capital, population,
+                area, and flag.</p>
+        </div>
+        
+        <div class="instruction-item">
+            <h3>View Country Details</h3>
+            <p>When you click a country, a modal will appear with detailed information about the country. You can close
+                the modal by clicking the "Close" button.</p>
+        </div>
+          
+        <div class="instruction-item">
+            <h3>Close the Country Details Modal</h3>
+            <p>To close the country details modal, click the "Close" button at the bottom of the modal or click anywhere outside the modal window.</p>
+        </div>
+
+        <div class="instruction-item">
+            <h3>Show More Countries</h3>
+            <p>If you want to see more countries on the globe, click the "Show More" button. This will expand the globe view to show more countries at once. You can click on any country in the expanded view to explore its details.</p>
+            <p>Enjoy exploring the world!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

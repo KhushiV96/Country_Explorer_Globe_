@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+header h1 {
+  font-size: 3em;
+  font-weight: 600;
+  background: linear-gradient(45deg, #000000, #ffffff, #0000ff);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.4), 
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(0, 0, 255, 0.4),
+    0 0 40px rgba(0, 0, 255, 0.3),
+    0 0 50px rgba(0, 0, 255, 0.2);
+}
+
+#details-container {
+  max-width: 600px;
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  border: 2px solid rgba(159, 159, 212, 0.5);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out forwards;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  backdrop-filter: blur(8px); 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#details-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(67, 67, 104, 0.7);
+}
+
+#details-container img {
+  width: 250px;
+  margin-bottom: 20px; 
+  border-radius: 5px;
+}
+
+#details-container .text-content h1 {
+  font-size: 3em;
+  color: #00BFFF;
+  margin-bottom: 15px;
+}
+
+#details-container .text-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 8px; 
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-card {
+  text-align: left;
+  margin-top: 50px;
+  animation: slideIn 0.6s ease-in-out;
+}
+
+.details-card h2 {
+  color: #0077b6;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.details-card img {
+  border-radius: 5px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.details-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #555;
+}
+
+.details-card p strong {
+  color: #333;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#back-button {
+  display: block;
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5, #2a2a72); 
+  color: white;
+  padding: 15px 30px; 
+  border: 2px solid #fff;
+  border-radius: 50px; 
+  font-size: 18px; 
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 50%; 
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+#back-button:hover {
+  background: linear-gradient(45deg, #ff6a00, #ff0000, #ff007f);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 1);
+  /* Removed scale effect to prevent the button from moving */
+}
+
+#back-button::before {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  #details-container {
+    width: 80%;
+    height: auto;
+  }
+
+  #details-container img {
+    width: 200px;
+  }
+
+  #back-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  #details-container {
+    width: 70%;
+    height: auto;
+  }
+
+  #details-container img {
+    width: 180px;
+  }
+
+  #back-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  #details-container {
+    width: 90%;
+    height: auto;
+  }
+
+  #details-container img {
+    width: 160px;
+  }
+
+  #back-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  #details-container {
+    width: 90%;
+    padding: 10px;
+    height: auto;
+  }
+
+  #details-container img {
+    width: 150px;
+  }
+
+  #back-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  #details-container {
+    width: 95%;
+    padding: 8px;
+    height: auto;
+  }
+
+  #details-container img {
+    width: 120px;
+  }
+
+  #back-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}

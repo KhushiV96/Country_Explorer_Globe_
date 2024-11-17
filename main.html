@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Explorer Globe</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>Country Explorer</h1>
+    <div class="search-container">
+      <select id="filter" class="filter-select">
+        <option value="all">All Regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+      <input type="text" id="search" class="search-bar" placeholder="Search for a country...">
+      <button id="search-button">Search</button>
+      <a href="instructions.html"><button id="instructions-button">Instructions</button></a>
+
+    </div>
+  </div>
+
+  <!-- 3D Globe Section -->
+  <div class="globe-container">
+    <div id="globe"></div>
+  </div>
+
+  <!-- Country Details Modal -->
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal">
+    <img id="country-flag" class="flag" src="" alt="Country Flag">
+    <h2 id="country-name"></h2>
+    <p><strong>Capital:</strong> <span id="country-capital"></span></p>
+    <p><strong>Region:</strong> <span id="country-region"></span></p>
+    <p><strong>Population:</strong> <span id="country-population"></span></p>
+    <p><strong>Area:</strong> <span id="country-area"></span> km²</p>
+    <button id="close-modal">Close</button>
+    <svg class="heart" id="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+    </svg>
+  </div>
+
+  <!-- Error Modal -->
+  <div class="error-modal" id="error-modal">
+    <h2>Favorites List Full</h2>
+    <p>You can only add 5 countries to your favorites.</p>
+    <button id="close-error-modal">Close</button>
+  </div>
+  <!-- Your index.html structure -->
+
+  <button class="heart" onclick="toggleFavorite()">❤️</button>
+
+  <!-- Message Popup -->
+  <div id="messagePopup" style="display: none;">
+    <h2>Favorites List Full</h2>
+    <p>You can only add 5 countries to your favorites.</p>
+  </div>
+  
+
+  <!-- Add other necessary HTML -->
+   <!-- Show More Button -->
+   <a href="index.html">
+<button id="show-more" class="show-more-button">Show More</button>
+</a>
+
+
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

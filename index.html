@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <header>
+    
+    
+    <h1>
+      
+      Country Explorer
+    </h1>
+    
+    <input type="text" id="search-bar" placeholder="Search for a country...">
+    
+    
+
+    <!-- <div id="autocomplete"></div> -->
+  </header>
+  
+
+  <!-- Filters Section -->
+  <div class="filters-wrapper">
+    <a href="main.html">
+    <button id="btn">
+      🔙 <!-- Left arrow symbol -->
+    </button></a>
+    <label for="region-filter">Region:</label>
+    <select id="region-filter">
+      <option value="">All</option>
+      <option value="Africa">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
+    </select>
+
+    <label for="language-filter">Language:</label>
+    <input type="text" id="language-filter" placeholder="Enter language">
+  </div>
+
+  <div class="container">
+    <main id="country-list">
+      <!-- Country cards will be dynamically generated here -->
+      <!-- Example of a country card without a like icon -->
+      <div class="country-card">
+        <h2>Country Name</h2>
+      </div>
+    </main>
+
+    <aside id="favorites-panel">
+      <h3>Favorites</h3>
+      <div id="favorites-list"></div>
+        <!-- Favorite countries will appear here -->
+      </div>
+    </aside>
+  </div>
+
+  <button id="show-more">Show More</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+  .country-card {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .country-card img {
+    width: 190px;
+    height: 100px;
+    display: block;
+    margin-left: 27px;
+  }
+
+  .country-card .like-icon {
+    position: absolute;
+    bottom: 10px; /* Adjusted to better fit within the card */
+    right: 20px; /* Moved closer for a balanced look */
+    cursor: pointer;
+    color: #ff0000; /* Bright red color */
+    font-size: 30px; /* Larger size for better visibility */
+    font-weight: bold; /* Ensures the icon appears bold */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover and interaction effects */
+}
+
+/* Hover effect for the heart icon */
+.country-card .like-icon:hover {
+    transform: scale(1.2); /* Slightly enlarges on hover */
+    color: #e60000; /* Darker red for a more pronounced effect */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.6); /* Subtle glow effect */
+}
+
+</style>

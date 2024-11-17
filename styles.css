@@ -1,0 +1,520 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-size: inherit;
+  filter: blur(10px);
+  z-index: -1;
+} */
+ 
+
+/* Header Styling */
+header {
+  padding: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+}
+
+header h1 {
+  font-size: 3em;
+  font-weight: 600;
+  background: linear-gradient(45deg, #000000, #ffffff, #0000ff); /* Black to White to Blue gradient */
+  background-clip: text;
+  color: transparent; /* Text color is transparent to show gradient */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5),  /* Glowing white outer glow */
+    0 0 10px rgba(255, 255, 255, 0.4), 
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(0, 0, 255, 0.4),    /* Blue glow */
+    0 0 40px rgba(0, 0, 255, 0.3),
+    0 0 50px rgba(0, 0, 255, 0.2);    /* Larger blue glow effect */
+}
+
+
+#search-bar {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(128, 128, 128, 0.3); /* Grey with transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Filters Section Styling */
+.filters-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between filters */
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center the section */
+  border-radius: 10px;
+  
+  width: 90%;
+  max-width: 800px;
+  background-image: url('https://www.thoughtco.com/thmb/6sQxqLKTJPwYcgAe3boH34UhDvM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/800px-ESO-Trumpler14-cluster-58b82ff43df78c060e650718.jpg');
+}
+
+.filters-wrapper label {
+  font-weight: 500;
+  color: #71e2f1;
+  background-color: rgba(128, 128, 128, 0.3); /* Grey with transparency */
+  padding: 5px; /* Add some padding to make the background visible */
+  border-radius: 5px; /* Optional: Rounded corners for the label */
+  border: 1px solid white;
+}
+
+
+.filters-wrapper select,
+.filters-wrapper input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Main Container and Content */
+.container {
+  display: flex;
+  margin: 0px;
+  gap: 20px;
+}
+
+/* Sidebar and Country List Styles Remain Unchanged */
+
+
+/* Sidebar Styling */
+aside {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#filters {
+  width: 20%;
+}
+
+#favorites-panel {
+  width: 20%;
+  border: 2px solid #e3e4e8;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+  color: white; /* Ensure text is visible */
+}
+
+#favorites-panel h3 {
+  margin-bottom: 10px;
+  color: #7e97af; /* Blue color for the text */
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.5), /* Soft white glow */
+    0 0 20px rgba(30, 144, 255, 0.4), /* Slight blue glow */
+    0 0 30px rgba(30, 144, 255, 0.3), /* Deep blue glow */
+    0 0 40px rgba(0, 0, 0, 0.3); /* Subtle black outer glow */
+  font-size: 40px; /* Set the font size */
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center the text */
+  letter-spacing: 2px; /* Add space between letters for style */
+  font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+
+#favorites-list .favorite-card {
+  margin-bottom: 20px; /* Increased bottom margin for better spacing */
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* Softer dashed border with white opacity */
+  padding-bottom: 15px; /* Increased padding for more space between card and content */
+  font-size: 16px; /* Slightly larger font for better readability */
+  color: #fff; /* White color for text */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for contrast */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding-left: 15px; /* Adds left padding for better alignment */
+  padding-right: 15px; /* Adds right padding for balance */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Smooth transition for multiple effects */
+  height: 300px; /* Increased height to make the card taller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* To position the flag image correctly */
+}
+
+#favorites-list .favorite-card:hover {
+  color: #1e90ff; /* Blue text color on hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 255, 0.3); /* Blue glow on hover for depth */
+}
+
+
+/* Main Content Styling */
+main {
+  flex: 1;
+}
+
+#country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.country-card {
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #e3e4e8;
+  padding: 15px;
+  text-align: center;
+  height: 220px;
+  background-color: transparent;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(5, 5, 5, 0.1);
+  perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.country-card:hover {
+  transform: translateY(-10px); /* Moves the card slightly up */
+  box-shadow: 0 0 20px 5px rgba(61, 57, 57, 0.3); /* Neon glow effect */
+  background-color: rgba(207, 223, 222, 0.1); /* Slightly visible white background */
+}
+
+
+.country-card img {
+  width: 550px;
+  height: 800px;
+  margin-left: 100px;
+  /* object-fit: cover; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.country-card h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: px;
+  color: #a6cfda;
+  z-index: 1;
+}
+
+.country-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Style for the Favorite Button */
+.favorite-btn {
+  background: none;
+  border: 5px solid red;
+  cursor: pointer;
+  font-size: 34px;
+  color: #ccc; /* Default gray color for the heart */
+  transition: color 0.3s;
+}
+
+/* Active state for the heart icon (when clicked) */
+.favorite-btn.active .heart-icon {
+  color: #e63946; /* Red color when the heart is clicked */
+}
+
+/* Style for the autocomplete suggestions */
+.autocomplete {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  width: calc(100% - 20px); /* Adjust to fit the input width */
+  z-index: 10;
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.suggestion:hover {
+  background-color: #f0f0f0;
+}
+
+/* Galaxy and Neon Starry Button */
+#show-more {
+  display: block;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5, #2a2a72); /* Gradient background */
+  color: white; /* Text color */
+  padding: 15px 30px;
+  border: 2px solid #fff; /* White border */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.7); /* Outer glow effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Add the neon glow on hover */
+#show-more:hover {
+  background: linear-gradient(45deg, #ff6a00, #ff0000, #ff007f); /* Change gradient on hover */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 1); /* Neon red glow */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Starry Background Animation */
+/* Add the neon glow on hover */
+#show-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: moveStars 2s linear infinite;
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.country-card {
+  position: relative;
+  /* Other existing styles */
+}
+
+.details-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust for icon size */
+  position: absolute;
+    bottom: 18px; /* Adjusted to better fit within the card */
+    right: 220px; /* Moved closer for a balanced look */
+    cursor: pointer;
+    font-size: 24px; /* Larger size for better visibility */
+    font-weight: bold; /* Ensures the icon appears bold */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover and interaction effects */
+}
+
+.details-button:hover,
+.details-button.clicked {
+  transform: scale(1.2); /* Slightly increase the size */
+  color: #00ffcc; /* Neon-like color */
+}
+
+/* Basic button styles */
+#btn {
+  background-color: transparent;
+  font-size: 24px; /* Adjust the size of the arrow */
+  padding: 10px 20px; /* Add some padding for a better button size */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none; /* Remove underline from the link */
+  display: inline-flex; /* Ensure the button is aligned properly */
+  align-items: center; /* Align the arrow properly */
+  justify-content: center; /* Center the arrow */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Hover effect */
+#btn:hover {
+  background-color: black;
+  color: white; /* Change text color to white */
+  transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header Styling */
+header {
+  padding: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 600;
+  background: linear-gradient(45deg, #000000, #ffffff, #0000ff);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(0, 0, 255, 0.4),
+    0 0 40px rgba(0, 0, 255, 0.3),
+    0 0 50px rgba(0, 0, 255, 0.2);
+}
+
+/* Responsive Layout */
+#search-bar {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(128, 128, 128, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Filters Section Styling */
+.filters-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.filters-wrapper label,
+.filters-wrapper select,
+.filters-wrapper input {
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 20px;
+  max-width: 1200px;
+  width: 90%;
+}
+
+aside, #favorites-panel {
+  width: 100%;
+}
+
+#favorites-panel {
+  padding: 15px;
+  border: 2px solid #e3e4e8;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+#country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .filters-wrapper {
+    flex-direction: row;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  aside, #favorites-panel {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 3em;
+  }
+
+  #country-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  #search-bar {
+    width: 100%;
+  }
+
+  .country-card {
+    height: auto;
+    padding: 10px;
+  }
+
+  .filters-wrapper label, 
+  .filters-wrapper select, 
+  .filters-wrapper input {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+

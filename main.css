@@ -1,0 +1,515 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  h1 {
+      font-size: 60px; /* Large and impactful size */
+      text-align: left; /* Aligns the text to the left */
+      background: linear-gradient(45deg, #000000, #1e90ff, #ffffff); /* Gradient background */
+      -webkit-background-clip: text; /* Clips the background to the text */
+      -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+      font-weight: bold;
+      margin: 20px 40px; /* Adds margin to shift the heading to the left */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 0 0 5px rgba(30, 144, 255, 0.3); /* Softer shadow with reduced blur */
+      letter-spacing: 2px; /* Adds spacing between letters */
+      padding-bottom: 10px; /* Space below the text */
+      animation: glowEffect 2s infinite alternate; /* Subtle glowing animation */
+  }
+  
+  @keyframes glowEffect {
+      0% {
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 0 0 5px rgba(30, 144, 255, 0.3);
+      }
+      100% {
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.5);
+      }
+  }
+  
+
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 12px 22px; /* Slightly increased padding for a thicker navbar */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  z-index: 1000;
+  background-image: url("https://w0.peakpx.com/wallpaper/241/159/HD-wallpaper-black-stars-black-aesthetic.jpg");
+  background-size: cover; /* Ensures the background image covers the navbar */
+  background-position: center; /* Centers the background image */
+  height: 70px; /* Slightly increased height */
+}
+
+
+  /* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Light shadow */
+  backdrop-filter: blur(6px); /* Slight blur for subtle effect */
+}
+
+/* Search Input */
+.search-bar {
+  padding: 12px;
+  font-size: 16px;
+  margin-right: 15px;
+  border: 2px solid #333; /* Dark gray border */
+  border-radius: 10px; /* Rounded corners */
+  background: linear-gradient(45deg, #1c1c1c, #1e90ff); /* Black and blue gradient */
+  color: white; /* White text for readability */
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+/* Hover effect for the search input */
+.search-bar:hover {
+  background: linear-gradient(45deg, #1c1c1c, #00bfff); /* Lighter blue on hover */
+  border-color: #1e90ff; /* Blue border on hover */
+}
+
+/* Filter Select */
+.filter-select {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #333; /* Dark gray border */
+  border-radius: 10px; /* Rounded corners */
+  background: linear-gradient(45deg, #1c1c1c, #1e90ff); /* Black and blue gradient */
+  color: white; /* White text */
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+/* Hover effect for the filter select */
+.filter-select:hover {
+  background: linear-gradient(45deg, #1c1c1c, #00bfff); /* Lighter blue on hover */
+  border-color: #1e90ff; /* Blue border on hover */
+}
+
+/* Styling for the dropdown menu of filter select */
+.filter-select option {
+  background: #222; /* Dark background for options */
+  color: white; /* White text */
+  padding: 10px; /* Proper padding for options */
+  border: none;
+}
+
+/* Focused state for dropdown to improve visibility */
+.filter-select:focus {
+  outline: none;
+  border-color: #1e90ff; /* Blue border when focused */
+}
+
+/* Adding some custom styles to the dropdown itself */
+.filter-select option:hover {
+  background-color: #444; /* Slightly lighter background on hover */
+  color: white; /* White text on hover */
+}
+
+/* Placeholder color */
+.search-bar::placeholder {
+  color: #a0a0a0; /* Light gray for better visibility */
+  opacity: 1; /* Ensure placeholder is fully opaque */
+}
+
+  /* Globe Container */
+  .globe-container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    /* Full height minus navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    /* Space for navbar */
+  }
+
+  .flag {
+    width: 100%;
+    /* Responsive flag */
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Heart Icon */
+  .heart {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    fill: transparent;
+    stroke: gray;
+    stroke-width: 2;
+    transition: fill 0.3s;
+  }
+
+  .heart.filled {
+    fill: red;
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+  }
+
+
+  /* Navigation Bar */
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Search Container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Add this line for spacing between elements */
+  }
+
+  .search-bar {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 0;
+    /* Remove margin-right to avoid extra space */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .filter-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Buttons */
+  button {
+    margin: 0 5px;
+    /* Add margin for spacing between buttons */
+  }
+
+  /* Add margin to the search bar and filter select */
+  .search-container>* {
+    margin: 0 10px;
+    /* Add horizontal margin for spacing */
+  }
+
+  /* Button styles */
+  button {
+    padding: 10px 15px;
+    /* Adjust padding for consistent button size */
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Ensure buttons have the same width */
+  #search-button {
+      width: 100px; /* Set a fixed width for the button */
+      padding: 12px;
+      background: linear-gradient(45deg, #1e90ff, #333); /* Gradient from blue to dark */
+      color: white; /* White text color */
+      border: 1px solid white; /* Remove default border */
+      border-radius: 8px; /* Rounded corners */
+      font-size: 16px; /* Font size for readability */
+      cursor: pointer; /* Pointer cursor on hover */
+      text-align: center; /* Center the text */
+      transition: all 0.3s ease-in-out; /* Smooth transition effect */
+      outline: none; /* Remove the outline */
+    }
+    
+    /* Hover effect for the button */
+    #search-button:hover {
+      background: linear-gradient(45deg, #1c1c1c, #1e90ff); /* Lighter blue gradient */
+      transform: scale(1.05); /* Slight zoom effect on hover */
+      box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), 0 0 15px rgba(0, 0, 0, 0.4); /* Glow effect */
+    }
+    
+    /* Focus effect for accessibility */
+    #search-button:focus {
+      outline: none; /* Remove focus outline */
+      box-shadow: 0 0 10px rgba(30, 144, 255, 0.8); /* Glow effect on focus */
+    }
+    
+  /* Hover effect for buttons */
+  button:hover {
+    background-color: #45a049;
+    /* Darker shade on hover */
+  }
+  /* Add this inside the <style> tag */
+
+    body {
+background: #000;
+overflow: hidden;
+margin: 0;
+padding: 0;
+position: relative;
+}
+
+/* Milky Way background */
+#milky-way-background {
+position: fixed;
+top: 0;
+left: 0;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle at center, #0d0d47, #000), url('path/to/milky-way.jpg');
+background-size: cover;
+animation: moveMilkyWay 60s linear infinite;
+z-index: -2;
+}
+
+@keyframes moveMilkyWay {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(-500px, -500px);
+}
+}
+
+/* Star field */
+.star {
+position: absolute;
+background: white;
+border-radius: 50%;
+width: 2px;
+height: 2px;
+opacity: 0.8;
+animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+0% {
+  opacity: 0.5;
+}
+100% {
+  opacity: 1;
+}
+}
+
+/* Shooting stars */
+.shooting-star {
+position: absolute;
+width: 2px;
+height: 100px;
+background: linear-gradient(white, transparent);
+transform: rotate(45deg);
+opacity: 0;
+animation: shooting 3s linear infinite;
+}
+
+@keyframes shooting {
+0% {
+  opacity: 1;
+  transform: translateY(0) rotate(45deg);
+}
+100% {
+  opacity: 0;
+  transform: translateY(-500px) translateX(500px) rotate(45deg);
+}
+}
+.globe-container canvas {
+background-color: transparent;
+}
+/* Show More Button */
+/* Galaxy and Neon Starry Button for .show-more-button */
+.show-more-button {
+  display: block;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5, #2a2a72); /* Gradient background */
+  color: white; /* Text color */
+  padding: 15px 30px;
+  border: 2px solid #fff; /* White border */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to exact center */
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.7); /* Outer glow effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Add the neon glow on hover */
+.show-more-button:hover {
+  background: linear-gradient(45deg, #000000, #1e90ff, #ffffff); /* Gradient with black, blue, and white */
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.5); /* Softer blue, white, and black glow */
+  transform: translateX(-50%) scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Starry Background Animation for the .show-more-button */
+.show-more-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: moveStars 2s linear infinite;
+}
+
+@keyframes moveStars {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+
+#heart-icon {
+display: none;
+}
+
+/* Container Styling for Country Details */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8); /* Black transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 80%;
+  max-width: 400px;
+  transition: transform 0.3s;
+  border: 1px solid #fafdfa;
+}
+
+.modal:hover {
+  transform: translate(-50%, -50%) scale(1.05); /* Slight scaling on hover */
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+  color: #fff; /* White color for the text */
+}
+
+.modal p {
+  color: #fff; /* White color for the text */
+}
+
+/* Close Button */
+.modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent; /* Keep the button background transparent */
+  border: 2px solid #1e90ff; /* Light blue border for the button */
+  color: white; /* White icon color */
+  font-size: 24px; /* Larger font size for better visibility */
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%; /* Round shape for close button */
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.6); /* Soft blue glow effect */
+}
+
+/* Hover effect for close button */
+.modal .close-btn:hover {
+  background-color: #1e1e1e; /* Dark background on hover */
+  color: #1e90ff; /* Change icon color to blue */
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.8); /* Stronger blue glow on hover */
+}
+
+/* Active effect for when the button is clicked */
+.modal .close-btn:active {
+  transform: scale(1); /* Reset zoom effect on click */
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Less glow effect on click */
+  background-color: #333; /* Darker background when clicked */
+}
+
+
+/* Heart Icon Removal from Modal */
+.heart {
+display: none; /* Hide the heart icon */
+}
+
+/* Globe Glow Effect for Details Container */
+.globe-container {
+filter: drop-shadow(0 0 5px #00ff00); /* Apply neon glow effect */
+}
+#instructions-button {
+  width: 120px; /* Set a fixed width for the button */
+  padding: 12px;
+  background: linear-gradient(45deg, #1e90ff, #333); /* Gradient from blue to dark */
+  color: white; /* White text color */
+  border: 1px solid white; /* Blue border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Font size for readability */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center the text */
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+  outline: none; /* Remove the outline */
+}
+
+/* Hover effect for the button */
+#instructions-button:hover {
+  background: linear-gradient(45deg, #1c1c1c, #1e90ff); /* Lighter blue gradient */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.6), 0 0 15px rgba(0, 0, 0, 0.4); /* Glow effect */
+  border-color: #00bfff; /* Lighter blue border on hover */
+}
+
+/* Focus effect for accessibility */
+#instructions-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.8); /* Glow effect on focus */
+  border-color: #00bfff; /* Lighter blue border on focus */
+}
